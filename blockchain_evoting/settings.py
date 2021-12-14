@@ -34,6 +34,7 @@ INSTALLED_APPS = [
 
     # custom apps
     "authy.apps.AuthyConfig",
+    "election.apps.ElectionConfig",
 ]
 
 MIDDLEWARE = [

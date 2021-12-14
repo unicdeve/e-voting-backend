@@ -63,4 +63,8 @@ class User(AbstractBaseUser, PermissionsMixin):
         ordering = ("-created_at",)
 
 
-
+class OTP(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='otps')
+    otp = models.CharField(unique=True, max_length=4)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
